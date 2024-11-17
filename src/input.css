@@ -2,3 +2,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+    .font-outline-3{
+        background: linear-gradient(to top,#201009,#D54801);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-stroke-width: 4px;
+        -webkit-text-stroke-color: transparent;
+        color: #161313;
+    }
+    .animate-ul{
+        visibility: hidden;
+        pointer-events: none;
+        transition: all .5s;
+    }
+    .text-hover:hover + ul{
+        visibility: visible;
+        pointer-events: initial;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .animate-ul:hover{
+        visibility: visible;
+        pointer-events: initial;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .nav-a{
+        transition: all .2s;
+    }
+    .nav-a::after{
+        content: '';
+        color: #fff;
+    }
+    .nav-a:hover:after{
+        color: #fff;
+    }
+    .nav-a:hover{
+        color: #805AF5;
+    }
+    .nav-icon{
+        width: 40px;
+        height: 40px;
+        position: relative;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-icon::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: #161313;
+        opacity: 0;
+        transition: all .5s;
+        z-index: -1;
+        border-radius: 50%;
+    }
+    .nav-icon:hover:before{
+        opacity: .7;
+    }
+}
