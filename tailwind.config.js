@@ -11,6 +11,7 @@ module.exports = {
         'orange-m': '#E34D00',
         'b-gradient': '#1E1C1C',
         'content-color': '#BCBCBC',
+        'price-color': '#805Af5',
       },
       keyframes: {
         'infinit-animate':{
